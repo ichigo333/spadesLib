@@ -1,0 +1,26 @@
+{
+  "players": {
+    "player": [
+      {
+        "id": "1",
+        "name": "Alex",
+        "team": "1"
+      },
+      {
+        "id": "2",
+        "name": "Louie",
+        "team": "1"
+      },
+      {
+        "id": "3",
+        "name": "BC",
+        "team": "2"
+      },
+      {
+        "id": "4",
+        "name": "Leslie",
+        "team": "2"
+      }
+    ]
+  }
+}
