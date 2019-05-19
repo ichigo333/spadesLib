@@ -7,5 +7,5 @@ class Bid:
     def update_taken(self, taken):
         self.taken = taken
 
-    # def update_bid(self, bid):
-    #   pass
+    def update_bid(self, bid):
+        self.bid = bid

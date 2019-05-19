@@ -1,5 +1,5 @@
 import json
-from deal import Player
+from player import Player
 from deal import Team
 
 if __name__ == '__main__':
