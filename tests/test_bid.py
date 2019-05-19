@@ -1,11 +1,12 @@
 import unittest
-from deal import Bid
+from bid import Bid
 from deal import Player
 
 
 class TestBid(unittest.TestCase):
     def setUp(self):
-        self.bid = Bid(1, Player("Alex", 1))
+        player = Player(1, "Alex", 1)
+        self.bid = Bid(1, player)
 
 
 class TestInit(TestBid):
@@ -21,7 +22,8 @@ class TestInit(TestBid):
     def test_taken_default(self):
         self.assertEqual(self.bid.taken, 0)
 
-class TestTaken(TestBid):
+
+class TestMethods(TestBid):
     def test_taken_can_be_updated(self):
         self.bid.update_taken(1)
         self.assertEqual(self.bid.taken, 1)
