@@ -7,6 +7,7 @@ class Bid:
     def update_taken(self, taken):
         self.taken = taken
 
+    #convert to properties?
     def update_ordered(self, ordered):
         self.ordered = ordered
 
