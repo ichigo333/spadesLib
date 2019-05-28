@@ -32,7 +32,7 @@ class TestMethods(TestBid):
         self.assertEqual(self.bid1.taken, 1)
 
     def test_ordered_can_be_updated(self):
-        self.bid1.update_ordered(3)
+        self.bid1.ordered = 3
         self.assertEqual(self.bid1.ordered, 3)
 
     def test_equal(self):
@@ -43,3 +43,7 @@ class TestMethods(TestBid):
 
     def test_not_equal_due_to_bid(self):
         self.assertNotEqual(self.bid1, self.bid4)
+
+    def test_player_assertion(self):
+        with self.assertRaises(AssertionError):
+            Bid(1, "not a player")

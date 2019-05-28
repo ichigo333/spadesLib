@@ -18,4 +18,9 @@ if __name__ == '__main__':
     players3 = import_player_from_json(player_list['players'][2])
     players4 = import_player_from_json(player_list['players'][3])
 
-    print("the end!")
+    print("Imported the following players:")
+    print(players1)
+    print(players2)
+    print(players3)
+    print(players4)
+

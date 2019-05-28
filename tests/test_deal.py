@@ -49,3 +49,19 @@ class TestProperties(TestDeal):
     def test_total_taken(self):
         self.deal.bid1.update_taken(4)
         self.assertEqual(self.deal.total_taken, 4)
+
+    def test_bid_1_instance_assertion(self):
+        with self.assertRaises(AssertionError):
+            Deal(1, "not a bid", self.bid2, self.bid3, self.bid4)
+
+    def test_bid_2_instance_assertion(self):
+        with self.assertRaises(AssertionError):
+            Deal(1, self.bid1, "not a bid", self.bid3, self.bid4)
+
+    def test_bid_3_instance_assertion(self):
+        with self.assertRaises(AssertionError):
+            Deal(1, self.bid1, self.bid2, "not a bid", self.bid4)
+
+    def test_bid_4_instance_assertion(self):
+        with self.assertRaises(AssertionError):
+            Deal(1, self.bid1, self.bid2, self.bid3, "not a bid")
